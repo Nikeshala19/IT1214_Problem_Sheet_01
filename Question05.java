@@ -1,4 +1,4 @@
-lass Student { 
+class Student { 
     private String name; 
     private int exam1; 
     private int exam2; 
