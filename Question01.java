@@ -1,4 +1,4 @@
-public class Student {
+class Student {
     private int studentID;
     private String name;
     private int daysAttended;
@@ -31,14 +31,32 @@ public class Student {
 }
 
 public class Classroom {
-    private Student[] students- new Student[];
+    private Student[] students = new Student[10];
     private int studentCount = 0;
     
     }
 
+     public void addStudent(Student student) {
+        if (studentCount < students.length) {
+            students[studentCount++] = student;
+        } else {
+            System.out.println("Classroom is full!");
+        }
+    }
+
+    public void updateAttendance(int studentId, int newDaysAttended) {
+        for (int i = 0; i < studentCount; i++) {
+            if (students[i].getStudentId() == studentId) {
+                students[i].setDaysAttended(newDaysAttended);
+                return;
+            }
+        }
+        System.out.println("Student ID " + studentId + " not found.");
+    }
+
     public void displayAllStudents() {
         for (int i = 0; i < studentCount; i++) {
-           
+           students[i].displayStudentDetails();
         }
     }
 }
