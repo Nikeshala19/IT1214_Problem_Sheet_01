@@ -25,18 +25,43 @@ public class Ticket {
 
 public class BookingSystem {
     private Ticket[] tickets = new Ticket[10]; 
+    private int count = 0;
 
     public boolean bookTicket(int ticketNumber, String customerName, int seatNumber) {
-       
+        if (seatNumber < 1 || seatNumber > 10) {
+            System.out.println("Invalid seat number. Please choose a seat between 1 and 10.");
+            return false;
+        }
+        for (int i = 0; i < tickets.length; i++) {
+            if (tickets[i] == null) {
+                tickets[i] = new Ticket(ticketNumber, customerName, seatNumber);
+                System.out.println("Ticket booked successfully: " + tickets[i]);
+                return true;
+            }
+        }
+        System.out.println("No available seats.");
+        return false;
     }
 
     public boolean cancelTicket(int ticketNumber) {
-       
+        for (int i = 0; i < tickets.length; i++) {
+            if (tickets[i] != null && tickets[i].getTicketNo() == ticketNo) {
+                System.out.println("Cancelling ticket: " + tickets[i]);
+                tickets[i] = null;
+                return true;
+            }
+        }
+        System.out.println("Ticket number " + ticketNo + " not found.");
+        return false;
         }
 
         public void displayBookings() {
         System.out.println("\nCurrent Bookings:");
-       
+        for (Ticket ticket : tickets) {
+            if (ticket != null) {
+                System.out.println(ticket);
+            }
+        }
     }
 }
 
