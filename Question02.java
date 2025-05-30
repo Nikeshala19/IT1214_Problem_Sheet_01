@@ -44,13 +44,7 @@ class ParkingLot {
     }
 
     public void parkVehicle(Vehicle vehicle) {
-        if (count < vehicles.length) {
-            vehicles[count] = vehicle;
-            count++;
-            System.out.println("Vehicle parked: " + vehicle.getLicensePlate());
-        } else {
-            System.out.println("Parking lot is full.");
-        }
+        
     }
 
     public void removeVehicle(String licensePlate) {
@@ -59,15 +53,7 @@ class ParkingLot {
 
 
     public void displayVehicles() {
-        if (count == 0) {
-            System.out.println("No vehicles parked.");
-        } else {
-            System.out.println("Parked Vehicles:");
-            for (int i = 0; i < count; i++) {
-                System.out.println(vehicles[i]);
-            }
-        }
-    }
+      
 }
 
 public class Question02 {
