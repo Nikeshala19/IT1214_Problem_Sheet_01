@@ -42,8 +42,17 @@ class Bank {
 
     public void withdraw(int accountNumber, double amount) {
         for (int i = 0; i < count; i++) {
-           
+            if (bankAccounts[i].getAccountNumber() == accountNumber) {
+                if (bankAccounts[i].getBalance() >= amount) {
+                    bankAccounts[i].setBalance(bankAccounts[i].getBalance() - amount);
+                    System.out.println("Withdrawal successful. New balance: " + bankAccounts[i].getBalance());
+                } else {
+                    throw new IllegalArgumentException("Insufficient funds.");
+                }
+                return;
             }
+        }
+        throw new IllegalArgumentException("Account not found.");
         }
        
 
