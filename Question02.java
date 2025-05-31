@@ -73,7 +73,7 @@ class ParkingLot {
 
 public class Question02 {
     public static void main(String[] args) {
-        parkingLot pLot = new ParkingLot();
+        ParkingLot pLot = new ParkingLot();
 
         pLot.parkVehicle(new Vehicle("ABC123", "John Doe", 2));
         pLot.parkVehicle(new Vehicle("XYZ789", "Jane Smith", 4));
