@@ -37,7 +37,7 @@ class Vehicle {
 }
 
 class ParkingLot {
-    private Vehicle[] vehicles = new Vehical[5];
+    private Vehicle[] vehicles = new Vehicle[5];
     private int count = 0;
 
     public void parkVehicle(Vehicle vehicle) {
@@ -73,7 +73,7 @@ class ParkingLot {
 
 public class Question02 {
     public static void main(String[] args) {
-        ParkingLot pLot = new ParkingLot(5);
+        parkingLot pLot = new ParkingLot();
 
         pLot.parkVehicle(new Vehicle("ABC123", "John Doe", 2));
         pLot.parkVehicle(new Vehicle("XYZ789", "Jane Smith", 4));
