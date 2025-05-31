@@ -27,7 +27,7 @@ class BankAccount {
 }
 
 class Bank {
-    private BankAccount[] bankAccounts = new BankAccounts[5];
+    private BankAccount[] bankAccounts = new BankAccount[5];
     private int count = 0;
     }
 
