@@ -30,11 +30,11 @@ class Student {
     }
 }
 
-public class Classroom {
+class Classroom {
     private Student[] students = new Student[10];
     private int studentCount = 0;
     
-    }
+    
 
      public void addStudent(Student student) {
         if (studentCount < students.length) {
