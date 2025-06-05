@@ -67,7 +67,7 @@ class Bank {
 
 pubpulic class Question03 {
     public static void main(String[] args) {
-        Bank bank = new Bank(5); 
+        Bank bank = new Bank(); 
 
         BankAccount account1 = new BankAccount(1001, "Alice", 5000.0);
         BankAccount account2 = new BankAccount(1002, "Bob", 3000.0);
